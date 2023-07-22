@@ -1,5 +1,6 @@
 #include "main.h"
 
+int _printf(const char *format, ...);
 /**
  * _printf - prints output according to the requested format
  * @format: A point to characters to be accessed
