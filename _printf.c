@@ -50,6 +50,8 @@ int _printf(const char *format, ...)
 			if (bufferpt)
 			{
 				count = count + bufferpt(list);
+				if (format[i] == '+' || format[i] == ' ' || format[i] == '#')
+					i++;
 			}
 		}
 		i++;
