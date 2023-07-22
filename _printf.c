@@ -6,7 +6,6 @@
  *
  * Return: returns the count if successful and -1 if failed
 */
-
 int _printf(const char *format, ...)
 {
 	unsigned int count, i, x;
@@ -21,7 +20,6 @@ int _printf(const char *format, ...)
 		{"i", _intPrint},
 		{NULL, NULL}
 	};
-	
 	if (!format)
 		return (-1);
 	va_start(list, format);
@@ -57,4 +55,4 @@ int _printf(const char *format, ...)
 	}
 	va_end(list);
 	return (count);
-}	
+}

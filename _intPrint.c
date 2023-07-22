@@ -2,7 +2,7 @@
 
 /**
  * _intPrint - Prints an integer
- * @nums: List of variadic arguments
+ * @ints: List of variadic arguments
  *
  * Return: Returns (count) ALWAYS
  */
