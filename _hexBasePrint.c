@@ -1,5 +1,7 @@
 #include "main.h"
 
+
+int _hexBasePrint(va_list num);
 /**
  * _hexBasePrint - Prints the hexadecimal lower cas
  * equivalent of an integer
@@ -13,7 +15,8 @@ int _hexBasePrint(va_list num)
 	int x, y, count, w;
 	unsigned int n, size, tmp;
 
-	char hexChars[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+	char hexChars[] = {'0', '1', '2', '3', '4', '5', '6',
+			 '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
 	n = va_arg(num, unsigned int);
 	count = 0;
 	if (n == 0)
@@ -32,7 +35,7 @@ int _hexBasePrint(va_list num)
 		}
 		result = malloc(sizeof(*result) * size);
 		if (!result)
-			return -1;
+			return (-1);
 		x = 0;
 		y = 0;
 		while (n > 0)

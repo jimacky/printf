@@ -1,16 +1,16 @@
 #include"main.h"
 
 /**
- * unsignedIntPrint - Prints an unsigned int
+ * _unsignedIntPrint - Prints an unsigned int
  * @num: variadic arguments
  *
  * Return: Return count
  */
 int _unsignedIntPrint(va_list num)
 {
-	unsigned count, value;
+	unsigned int count, value;
 	unsigned int divisor, buffer, result;
-	
+
 	count = 0;
 	value = va_arg(num, unsigned int);
 	if (value == 0)
