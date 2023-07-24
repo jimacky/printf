@@ -19,6 +19,9 @@ int _printf(const char *format, ...)
 		{"s", _stringPrint},
 		{"%", _percentPrint},
 		{"d", _intPrint},
+		{"x", _hexBasePrint},
+		{"X", _HEXBasePrint},
+		{"u", _unsignedIntPrint},
 		{"o", _octBasePrint},
 		{"i", _intPrint},
 		{NULL, NULL}

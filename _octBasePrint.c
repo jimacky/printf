@@ -44,5 +44,6 @@ int _octBasePrint(va_list num)
 		_putchar(buffer[z] + '0');
 		count++;
 	}
+	free(buffer);
 	return (count);
 }

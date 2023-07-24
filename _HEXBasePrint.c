@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * _hexBasePrint - Prints the hexadecimal lower cas
+ * _HEXBasePrint - Prints the hexadecimal lower cas
  * equivalent of an integer
  * @num: variadic arguments
  *
  * Return: returns count
  */
-int _hexBasePrint(va_list num)
+int _HEXBasePrint(va_list num)
 {
 	char *result;
 	int x, y, count, w;
 	unsigned int n, size, tmp;
 
-	char hexChars[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+	char hexChars[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 	n = va_arg(num, unsigned int);
 	count = 0;
 	if (n == 0)
