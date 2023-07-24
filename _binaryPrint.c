@@ -28,7 +28,7 @@ int _binaryPrint(va_list num)
 int checkbinary(unsigned int x)
 {
 	if (x > 1)
-		return (checkbinary(x >> 1));
+		checkbinary(x >> 1);
 	_putchar((x & 1) + '0');
 	return (1);
 }

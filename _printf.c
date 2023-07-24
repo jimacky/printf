@@ -14,11 +14,12 @@ int _printf(const char *format, ...)
 	int (*bufferpt)(va_list);
 
 	func_id func_array[] = {
-		{"c", _charPrint},{"b", _binaryPrint},
-		{"s", _stringPrint}, {"u", _unsignedIntPrint},
-		{"%", _percentPrint}, {"o", _octaBasePrint},
-		{"d", _intPrint}, {"x", _hexaBasePrint},
-		{"i", _intPrint}, {"X", _HexaBasePrint},
+		{"c", _charPrint},
+		{"b", _binaryPrint},
+		{"s", _stringPrint},
+		{"%", _percentPrint},
+		{"d", _intPrint},
+		{"i", _intPrint},
 		{NULL, NULL}
 	};
 	if (!format)
