@@ -23,6 +23,11 @@ int _charPrint(va_list chars);
 int _stringPrint(va_list str);
 int _intPrint(va_list ints);
 int _percentPrint(__attribute__((unused)) va_list arg);
+int _binaryPrint(va_list num);
+int _octBasePrint(va_list num);
+int _hexBasePrint(va_list num);
+int _HEXBasePrint(va_list num);
+int _unsignedIntPrint(va_list num);
 
 
 
