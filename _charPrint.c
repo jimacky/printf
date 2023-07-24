@@ -8,9 +8,10 @@
  */
 int _charPrint(va_list chars)
 {
-	char c = (char)va_arg(chars, int);
+	char c;
 
-	if (_putchar(c) == -1)
-		return (-1);
+	c = (char)va_arg(chars, int);
+
+	_putchar(c);
 	return (1);
 }
