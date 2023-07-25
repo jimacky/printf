@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 {
 	unsigned int count, i, x;
 	va_list list;
+	int isSeen;
 	int (*bufferpt)(va_list);
 
 	func_id func_array[] = {
@@ -31,6 +32,7 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	i = 0;
 	count = 0;
+	isSeen = 0;
 	while (format && format[i])
 	{
 		if (format[i] != '%')
@@ -48,8 +50,23 @@ int _printf(const char *format, ...)
 			while (func_array[x].id)
 			{
 				if (func_array[x].id[0] == format[i + 1])
+				{
 					bufferpt = func_array[x].id_func;
+					isSeen = 1;
+				}
 				x++;
+			}
+			if (isSeen != 1)
+				bufferpt = NULL;
+			if (!bufferpt)
+			{
+				if (format[i + 1] != '%')
+				{
+					_putchar(format[i]);
+					count++;
+				}
+				_putchar(format[i + 1]);
+				count++;
 			}
 			i += 1;
 			if (bufferpt)
