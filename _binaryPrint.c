@@ -16,12 +16,13 @@ int _binaryPrint(va_list num)
 
 	x = va_arg(num, unsigned int);
 	count = 0;
-	if (x <= 1)
+	if (x < 1)
 	{
 		_putchar(x + '0');
 		count++;
 	}
-	count = checkbinary(x);
+	else		
+		count = checkbinary(x);
 	return (count);
 }
 
