@@ -52,7 +52,7 @@ int _HEXBasePrint(va_list num)
 			count++;
 			y--;
 		}
+		free(result);
 	}
-	free(result);
 	return (count);
 }

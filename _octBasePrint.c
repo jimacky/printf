@@ -18,6 +18,7 @@ int _octBasePrint(va_list num)
 	{
 		_putchar(0 + '0');
 		count++;
+		return (count);
 	}
 	else
 	{
