@@ -46,11 +46,10 @@ int _hexBasePrint(va_list num)
 			x++;
 			y++;
 		}
-		while (y >= 0)
+		while (--y >= 0)
 		{
 			_putchar(result[y]);
 			count++;
-			y--;
 		}
 		free(result);
 	}
