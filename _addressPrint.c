@@ -22,12 +22,14 @@ int _addressPrint(va_list addr)
     {
         str = converter(p);
     }
+    _putchar('0');
+    _putchar('x');
     while (str[count] != '\0')
     {
-        _putchar(str[count]);
-        count++;
+	    _putchar(str[count]);
+	    count++;
     }
-	
+	free(str);
 	return (count);
 }
 
@@ -40,16 +42,33 @@ int _addressPrint(va_list addr)
 char *converter(unsigned long int num)
 {
 	char *hex, *ptr;
-	char buffer[50];
-	int x;
+	char *buffer;
+	int x, i;
+	unsigned long int tmp;
 
 	hex = "0123456789abcdef";
-	ptr = &buffer[49];
-	*ptr = '\0';
-	do {
-		x = num % 16;
-		*--ptr = hex[x];
+	x = 0;
+	tmp = num;
+	while (tmp > 0)
+	{
+		x++;
+		tmp /= 16;
+	}
+	ptr = malloc((sizeof(ptr)) * x);
+	buffer = malloc((sizeof(buffer)) * x);
+	i = 0;
+	while (num > 0)
+	{
+		ptr[i] = hex[(num % 16)];
 		num /= 16;
-	} while (num != 0);
-	return (ptr);
+		i++;
+	}
+	x = 0;
+	while (--i >= 0)
+	{
+		buffer[x] = ptr[i];
+		x++;
+	}
+	free(ptr);
+	return (buffer);
 }
