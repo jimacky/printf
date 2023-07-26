@@ -28,7 +28,8 @@ int _octBasePrint(va_list num);
 int _hexBasePrint(va_list num);
 int _HEXBasePrint(va_list num);
 int _unsignedIntPrint(va_list num);
-
+int _addressPrint(va_list addr);
+int _STRINGPrint(va_list Str);
 
 
 

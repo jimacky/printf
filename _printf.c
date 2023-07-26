@@ -25,6 +25,8 @@ int _printf(const char *format, ...)
 		{"u", _unsignedIntPrint},
 		{"o", _octBasePrint},
 		{"i", _intPrint},
+		{"S", _STRINGPrint},
+		{"p", _addressPrint},
 		{NULL, NULL}
 	};
 	if (!format)
