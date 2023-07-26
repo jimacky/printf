@@ -12,24 +12,25 @@ int _addressPrint(va_list addr)
 {
 	char *str;
 	unsigned long int p;
-    int count;
+	int count;
 
-    p = va_arg(addr, unsigned long int);
+	p = va_arg(addr, unsigned long int);
 	count = 0;
 	if (!p)
 		str = "(nil)";
-    else
-    {
-        str = converter(p);
-    }
-    _putchar('0');
-    _putchar('x');
-    while (str[count] != '\0')
-    {
-	    _putchar(str[count]);
-	    count++;
-    }
-	free(str);
+    	else
+    	{
+        	str = converter(p);
+		_putchar('0');
+		_putchar('x');
+   	}
+    	while (str[count] != '\0')
+    	{
+		_putchar(str[count]);
+		count++;
+	}
+	if(p)
+		free(str);
 	return (count);
 }
 
