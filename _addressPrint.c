@@ -18,18 +18,18 @@ int _addressPrint(va_list addr)
 	count = 0;
 	if (!p)
 		str = "(nil)";
-    	else
-    	{
-        	str = converter(p);
+	else
+	{
+		str = converter(p);
 		_putchar('0');
 		_putchar('x');
-   	}
-    	while (str[count] != '\0')
-    	{
+	}
+	while (str[count] != '\0')
+	{
 		_putchar(str[count]);
 		count++;
 	}
-	if(p)
+	if (p)
 		free(str);
 	return (count);
 }
