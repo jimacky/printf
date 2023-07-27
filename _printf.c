@@ -9,7 +9,7 @@ int _printf(const char *format, ...);
 */
 int _printf(const char *format, ...)
 {
-	unsigned int count, i, x;
+	unsigned int count, i, x, wcount;
 	va_list list;
 	int isSeen;
 	int (*bufferpt)(va_list);
@@ -75,9 +75,21 @@ int _printf(const char *format, ...)
 			i += 1;
 			if (bufferpt)
 			{
-				count = count + bufferpt(list);
+				wcount = 0;
+				wcount = bufferpt(list);
+				if (format[i] == 'R' || format[i] == 'r')
+				{
+					if (wcount == 0)
+					{
+						i++;
+					}
+				}
+
+				count = count + wcount;
 				if (format[i] == '+' || format[i] == ' ' || format[i] == '#')
-					i++;
+				{
+					;
+				}
 			}
 		}
 		i++;

@@ -15,6 +15,7 @@ int _rotPrint(va_list str)
 	letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	rot = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	i = 0;
+	count = 0;
 	while (buffer[i])
 	{
 		j = 0;

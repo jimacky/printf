@@ -8,37 +8,24 @@
  */
 int _revStringPrint(va_list str)
 {
-	char *temp, *buffer;
+	char *temp;
 	int i, count;
 
 	temp = va_arg(str, char *);
 	i = 0;
-	if (!str)
-	{
-		buffer = "(null)";
-		i = 6;
-	}
-	else
-	{
-		while (temp[i])
-			i++;
-	}
 	count = 0;
-	if (!temp)
+	if (temp == NULL)
 	{
-		while (--i > count)
-		{
-			_putchar(buffer[count]);
-			count++;
-		}
+		temp = ")llun(";
 	}
-	else
+	while (temp[i])
 	{
-		while (--i > 0)
-		{
-			_putchar(temp[i]);
-			count++;
-		}
+		i++;
+	}
+	while (--i >= 0)
+	{
+		_putchar(temp[i]);
+		count++;
 	}
 	return (count);
 }
