@@ -84,12 +84,11 @@ int _printf(const char *format, ...)
 						i++;
 					}
 				}
-
-				count = count + wcount;
-				if (format[i] == '+' || format[i] == ' ' || format[i] == '#')
+				else if(format[i] == '+' || format[i] == ' ' || format[i] == '#')
 				{
-					;
+					i++;
 				}
+				count = count + wcount;
 			}
 		}
 		i++;

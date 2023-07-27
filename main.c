@@ -43,5 +43,10 @@ int main(void)
     _printf("%R", "Guvf fragrapr vf ergevrirq sebz in_netf!\n");
     _printf("Complete the sentence: You nothing, Jon Snow.\n");
     _printf("Complete the sentence: You %r nothing, Jon Snow.\n", "");
+    _printf("Complete the sentence: You %R nothing, Jon Snow.\n", "xabj");
+    _printf("Complete the sentence: You %R nothing, Jon Snow.\n", "");
+    printf("%R", "Guvf fragrapr vf ergevrirq sebz in_netf!\n");
+    _printf("Complete the sentence: You %r nothing, Jon Snow.\n", "know");
+    _printf("Complete the sentence: You %r nothing, Jon Snow.\n", "");
     return (0);
 }
