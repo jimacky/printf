@@ -40,6 +40,8 @@ int main(void)
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len2);
     printf("Len:[%d]\n", len2);
-    _printf("Unknown:[%r]\n");
+    _printf("%r\n", "\nThis sentence is retrieved from va_args!");
+    _printf("%R", "Guvf fragrapr vf ergevrirq sebz in_netf!\n");
+    _printf("Complete the sentence: You %R nothing, Jon Snow.\n", "xabj");
     return (0);
 }

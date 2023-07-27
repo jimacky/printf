@@ -30,7 +30,8 @@ int _HEXBasePrint(va_list num);
 int _unsignedIntPrint(va_list num);
 int _addressPrint(va_list addr);
 int _STRINGPrint(va_list Str);
-
+int _revStringPrint(va_list str);
+int _rotPrint(va_list str);
 
 
 

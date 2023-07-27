@@ -26,6 +26,8 @@ int _printf(const char *format, ...)
 		{"o", _octBasePrint},
 		{"i", _intPrint},
 		{"S", _STRINGPrint},
+		{"r", _revStringPrint},
+		{"R", _rotPrint},
 		{"p", _addressPrint},
 		{NULL, NULL}
 	};
