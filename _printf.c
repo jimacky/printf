@@ -84,7 +84,7 @@ int _printf(const char *format, ...)
 						i++;
 					}
 				}
-				else if(format[i] == '+' || format[i] == ' ' || format[i] == '#')
+				else if (format[i] == '+' || format[i] == ' ' || format[i] == '#')
 				{
 					i++;
 				}
