@@ -1,7 +1,9 @@
 #include "main.h"
 
+
+int _STRINGPrint(va_list str);
 /**
- * print_Str - Prints a string of no 
+ * _STRINGPrint - Prints a string of no
  * printable character in specific way
  * @Str: variadic arguments
  *
@@ -16,9 +18,9 @@ int _STRINGPrint(va_list Str)
 	tmp = va_arg(Str, char *);
 	if (tmp == NULL)
 		tmp = "(null)";
-    i = 0;
-    n = 0;
-    count = 0;
+	i = 0;
+	n = 0;
+	count = 0;
 	while (tmp[i])
 	{
 		y = 0;
@@ -47,7 +49,7 @@ int _STRINGPrint(va_list Str)
 			_putchar(tmp[i]);
 			count++;
 		}
-        i++;
+		i++;
 	}
 	return (count);
 }

@@ -21,7 +21,7 @@ int _binaryPrint(va_list num)
 		_putchar(x + '0');
 		count++;
 	}
-	else		
+	else
 		count = checkbinary(x);
 	return (count);
 }
