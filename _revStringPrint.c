@@ -2,7 +2,7 @@
 
 /**
  * _revStringPrint - Prints a string in reverse
- * @Str: variadic arguments
+ * @str: variadic arguments
  *
  * Return: returns the count
  */
